@@ -162,21 +162,6 @@ def load_brawlstars():
 def mainApi():
     return render_template("methods/getToken.html")
 
-@app.route("/api/getAdminData", methods=["GET"])
-def getAdminData():
-
-    DATA = {
-        "result": {
-            "SYSTEM":           platform.system(),
-            "NODE":             platform.node(),
-            "ARCHITECTURE":     platform.architecture(),
-            "VERSION":          platform.version(),
-            "NAME":             platform.uname()
-        }
-    }
-
-    return DATA
-
 @app.route("/api/createToken", methods=["GET"])
 def create_token():
 
